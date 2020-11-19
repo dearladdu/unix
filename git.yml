@@ -1,0 +1,9 @@
+---
+ - hosts: jenkins
+   gather_facts: False
+   vars:
+    - packages: ["git"]
+   tasks:
+    - name: Installing {{ packages }} on jenkins
+      apt: name=git update_cache=yes
+      become: yes
