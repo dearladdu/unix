@@ -3,22 +3,22 @@ pipeline {
     stages {
         stage('update') {
             steps {
-               sh 'sudo apt update'
+               sh 'apt update'
             }
         }
         stage('Install Dependency') {
             steps {
-               sh 'sudo apt install software-properties-common'
+               sh 'apt install software-properties-common'
             }
         }   
         stage('Add repo') {
             steps {
-               sh 'sudo add-apt-repository ppa:deadsnakes/ppa -y'
+               sh 'add-apt-repository ppa:deadsnakes/ppa -y'
             }
         }
         stage('Install Python') {
             steps {
-               sh 'sudo apt install python3.7'
+               sh 'apt install python3.7'
             }
         }
          stage('Python version') {
