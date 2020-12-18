@@ -1,5 +1,5 @@
 pipeline {
-    agent { 192.168.0.26 }
+    agent none 
     stages {
         stage('build') {
             steps {
